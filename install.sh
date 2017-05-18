@@ -6,7 +6,7 @@ echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
 echo "--- Atualizando o sistema ---"
-sudo apt-get upgrade --yes --force-yes
+sudo apt-get upgrade --yes
 
 # echo "--- Definindo Senha padrao para o MySQL e suas ferramentas ---"
 
@@ -28,16 +28,16 @@ sudo apt-get upgrade --yes --force-yes
 # EOF
 
 echo "--- Instalando pacotes basicos ---"
-sudo apt-get install --yes --force-yes vim curl python-software-properties git-core
+sudo apt-get install --yes vim curl python-software-properties git-core
 
 echo "--- Atualizando lista de pacotes ---"
-sudo apt-get update --yes --force-yes
+sudo apt-get update --yes
 
 # echo "--- Instalando MySQL, Phpmyadmin ---"
-# sudo apt-get install --yes --force-yes mysql-server mysql-client phpmyadmin
+# sudo apt-get install --yes mysql-server mysql-client phpmyadmin
 
 echo "--- Instalando PHP, Apache e alguns modulos ---"
-sudo apt-get install --yes --force-yes php apache2 libapache2-mod-php php-curl php-gd php-mcrypt php-zip unzip php-sqlite3 #php-mysql
+sudo apt-get install --yes php apache2 libapache2-mod-php php-xml php-mbstring php-curl php-gd php-mcrypt php-zip unzip php-sqlite3 #php-mysql
 
 echo "--- Habilitando mod-rewrite do Apache ---"
 sudo a2enmod rewrite
@@ -62,8 +62,8 @@ echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 source ~/.bashrc
 
 echo "--- Instalando Banco NoSQL -> Redis <- ---"
-sudo apt-get install --yes --force-yes redis-server
-sudo apt-get install --yes --force-yes php-redis
+sudo apt-get install --yes redis-server
+sudo apt-get install --yes php-redis
 
 echo "--- Reiniciando Apache ---"
 sudo service apache2 restart
